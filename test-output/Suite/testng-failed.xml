@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Practice.MergeleadsTestNG"/>
+      <class name="Practice.DeleteLeadTestNG"/>
+      <class name="Practice.EditLeadTestNG"/>
+      <class name="Practice.CreateleadTestNG"/>
+      <class name="Practice.DuplicateLeadTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="Practice.DuplicateLeadTestNG">
+        <methods>
+          <include name="loginLeafTaps"/>
+          <include name="closeApp"/>
+          <include name="leadDuplication" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Practice.DuplicateLeadTestNG -->
+      <class name="Practice.DeleteLeadTestNG">
+        <methods>
+          <include name="toDeleteLead" invocation-numbers="0"/>
+          <include name="loginLeafTaps"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- Practice.DeleteLeadTestNG -->
+      <class name="Practice.EditLeadTestNG">
+        <methods>
+          <include name="loginLeafTaps"/>
+          <include name="toEditLead" invocation-numbers="0"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- Practice.EditLeadTestNG -->
+      <class name="Practice.CreateleadTestNG">
+        <methods>
+          <include name="loginLeafTaps"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- Practice.CreateleadTestNG -->
+      <class name="Practice.MergeleadsTestNG">
+        <methods>
+          <include name="mergelead" invocation-numbers="0"/>
+          <include name="loginLeafTaps"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- Practice.MergeleadsTestNG -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
